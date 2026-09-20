@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EasyVietnam — Your Vietnam Companion</title>
+  <style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#4a3c46;background:#fffdfb}a{text-decoration:none;color:inherit}button,input,textarea,select{font:inherit}.topbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:14px 6%;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid #f2d9d6}.brand{display:flex;align-items:center;gap:8px;font-size:18px;letter-spacing:.5px}.brand-mark{color:#f37c91;font-size:24px}.brand b{color:#f06f84}.topbar nav{display:flex;gap:28px;font-size:14px}.topbar nav a:hover{color:#e96f83}.lang-btn{border:1px solid #efb7bc;background:#fff8f7;border-radius:20px;padding:7px 13px;color:#bd6370}.hero{min-height:650px;padding:80px 8%;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px;background:linear-gradient(135deg,#fff7f5 0%,#fffdf7 55%,#fff0f2 100%);overflow:hidden}.eyebrow{display:inline-block;color:#d96979;font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:15px}.hero h1{font-size:clamp(42px,6vw,74px);line-height:1.02;margin:0 0 20px;color:#503d49}.hero h1 span{color:#e97789}.hero p{font-size:18px;line-height:1.7;max-width:610px;color:#766873}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0}.primary,.secondary{display:inline-flex;align-items:center;justify-content:center;border-radius:14px;padding:13px 18px;font-weight:800;cursor:pointer;border:0}.primary{background:#e97b8d;color:#fff;box-shadow:0 8px 22px rgba(233,123,141,.22)}.secondary{background:#fff;border:1px solid #efc6c7;color:#8c5d67}.trust-row{display:flex;gap:18px;flex-wrap:wrap;color:#8a7b81;font-size:12px}.phone-wrap{display:flex;justify-content:center}.phone{width:280px;height:560px;border:8px solid #3c3440;border-radius:38px;background:#fff8f7;box-shadow:0 30px 70px rgba(80,50,60,.18);padding:32px 16px 16px;position:relative}.phone-notch{position:absolute;top:7px;left:92px;width:80px;height:18px;background:#3c3440;border-radius:20px}.phone-title{text-align:center;font-weight:900;color:#df6d81;margin-top:4px}.phone-sub{text-align:center;font-size:11px;color:#9d8b91;margin:2px 0 18px}.welcome-card{background:#fff0c9;border:1px solid #f0d9a0;border-radius:16px;padding:16px;text-align:center;font-weight:800;color:#66525b;margin-bottom:12px}.welcome-card small{font-weight:500;color:#806e72}.mini-card{display:block;width:100%;border:1px solid #ecc9cb;border-radius:15px;padding:14px;text-align:left;margin:9px 0;color:#644d57;cursor:pointer}.mini-card b,.mini-card small{display:block;margin-left:26px}.mini-card small{font-size:10px;color:#8d7d83}.pink{background:#f8d8df}.yellow{background:#fff0bd}.rose{background:#f9e1e5}.phone-nav{position:absolute;bottom:12px;left:0;right:0;text-align:center;color:#9a858d}.section{padding:90px 8%}.intro{background:#fff}.intro h2,.feature h2,.emergency h2,.cta h2{font-size:clamp(32px,4vw,50px);line-height:1.1;margin:0 0 20px;color:#503d49}.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}.problem-grid article{padding:25px;border:1px solid #f0dfe0;border-radius:22px;background:#fffafa}.problem-grid span{font-size:28px}.problem-grid h3{margin:14px 0 7px}.problem-grid p,.feature-copy p,.emergency p,.cta p{color:#7b6c72;line-height:1.7}.feature{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center;background:#fff6f4}.feature.reverse{grid-template-columns:1.1fr .9fr;background:#fffdf8}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px}.chip{border:1px solid #edced0;background:#fff;border-radius:18px;padding:8px 12px;cursor:pointer;color:#7a646b}.chip.active{background:#f6cdd3;color:#734f58}.map-card{background:#fff;border:1px solid #ead9d8;border-radius:25px;overflow:hidden;box-shadow:0 20px 50px rgba(80,50,60,.08)}.map-surface{height:320px;position:relative;overflow:hidden;background:#eef1dc;background-image:linear-gradient(35deg,transparent 45%,#d8d8b9 46%,#d8d8b9 48%,transparent 49%),linear-gradient(120deg,transparent 46%,#d8d8b9 47%,#d8d8b9 49%,transparent 50%)}.road{position:absolute;height:12px;background:#fff;border:2px solid #d9d8c7;border-radius:20px;transform:rotate(-22deg)}.r1{width:110%;top:80px;left:-30px}.r2{width:100%;top:220px;left:50px;transform:rotate(18deg)}.r3{width:80%;top:145px;left:100px;transform:rotate(74deg)}.pin{position:absolute;font-size:24px;background:#fff;border-radius:50%;padding:7px;box-shadow:0 5px 15px #9996}.p1{left:20%;top:28%}.p2{left:55%;top:62%}.p3{left:75%;top:25%}.p4{left:62%;top:15%}.you{position:absolute;left:43%;top:42%;font-size:35px;color:#df7183;text-shadow:0 2px 5px #fff}.you small{display:block;font-size:10px;background:#fff;padding:3px 7px;border-radius:8px;margin-top:-8px;color:#7c656d}.map-label{position:absolute;background:#fff;padding:6px 9px;border-radius:9px;font-size:11px;box-shadow:0 3px 10px #7773}.l1{left:10%;top:45%}.l2{left:51%;top:76%}.place-list{padding:14px}.place{display:flex;align-items:center;justify-content:space-between;padding:11px 8px;border-bottom:1px solid #f0e7e6}.place:last-child{border:0}.place small{color:#8c7a80}.chat-demo{background:#fff;border:1px solid #e8d9da;border-radius:25px;overflow:hidden;box-shadow:0 20px 50px rgba(80,50,60,.08)}.chat-head{padding:18px;background:#f8d9df}.chat-head span{float:right;font-size:11px;color:#6a9b78}.messages{padding:20px;min-height:290px;background:#fffaf9;display:flex;flex-direction:column;gap:12px}.msg{max-width:78%;padding:12px 14px;border-radius:16px;font-size:14px;line-height:1.5}.msg.user{align-self:flex-end;background:#eee6e6}.msg.bot{align-self:flex-start;background:#f6dbe0}.chat-input{display:flex;padding:12px;border-top:1px solid #eee}.chat-input input{flex:1;border:0;outline:0;padding:12px}.chat-input button{width:44px;border:0;border-radius:12px;background:#e97b8d;color:#fff}.quote{margin-top:25px;padding:18px;border-left:4px solid #e97b8d;background:#fff0f1;border-radius:0 15px 15px 0;color:#765963;font-style:italic}.emergency{background:#fff5f0}.emergency-head{text-align:center;max-width:700px;margin:auto}.emergency-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:950px;margin:35px auto 0}.sos-card,.translate-card{background:#fff;border-radius:25px;padding:28px;border:1px solid #ead9d8}.sos-card{background:#fff1f2}.shield{font-size:32px}.sos-card h3,.translate-card h3{font-size:24px;margin:12px 0}.sos-btn,.location-btn,.full{width:100%;padding:13px;border-radius:12px;margin-top:10px;cursor:pointer}.sos-btn{border:0;background:#df5d72;color:#fff;font-weight:800}.location-btn{border:1px solid #e8c8ca;background:#fff;color:#765761}.sos-card small{display:block;margin-top:10px;color:#6d8d75}.translate-row{display:flex;gap:10px;align-items:center}.translate-row select{flex:1;padding:10px;border:1px solid #ead1d2;border-radius:10px;background:#fff}.translate-card textarea{width:100%;height:90px;resize:none;border:1px solid #ead1d2;border-radius:12px;padding:12px;margin-top:14px;outline:none}.translation-result{margin-top:12px;padding:12px;border-radius:12px;background:#fff4d9;color:#66545a;min-height:46px}.cta{text-align:center;background:linear-gradient(135deg,#fff1f2,#fff9e8)}.cta .primary{margin-top:10px}footer{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;padding:25px 8%;background:#4b3d46;color:#fff;font-size:12px}footer span{color:#d9c9ce}@media(max-width:850px){.topbar nav{display:none}.hero{grid-template-columns:1fr;text-align:center;padding-top:55px}.hero p{margin:auto}.hero-actions,.trust-row{justify-content:center}.problem-grid,.emergency-grid,.feature,.feature.reverse{grid-template-columns:1fr}.feature{gap:35px}.feature.reverse .chat-demo{order:2}.section{padding:65px 6%}.map-card{margin-top:10px}.phone{width:250px;height:500px}.hero{min-height:auto}.topbar{padding:12px 5%}}
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="EasyVietnam home">
+      <span class="brand-mark">✦</span>
+      <span><b>EASY</b>VIETNAM</span>
+    </a>
+    <nav>
+      <a href="#home">Trang chủ</a>
+      <a href="#map">Bản đồ</a>
+      <a href="#chat">Trợ lý AI</a>
+      <a href="#emergency">SOS & Dịch</a>
+    </nav>
+    <button class="lang-btn" id="langBtn">VI / EN</button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">🌸 Easy & Safe Travel in Vietnam</span>
+        <h1>Xin chào!<br><span>Welcome to Vietnam.</span></h1>
+        <p>Trợ lý du lịch dành cho người nước ngoài — giúp bạn tìm địa điểm, hỏi đáp bằng AI, dịch nhanh và xử lý tình huống khẩn cấp.</p>
+        <div class="hero-actions">
+          <a class="primary" href="#chat">💬 Hỏi trợ lý AI</a>
+          <a class="secondary" href="#map">📍 Tìm địa điểm gần bạn</a>
+        </div>
+        <div class="trust-row">
+          <span>✓ 24/7 AI Assistant</span>
+          <span>✓ Quick Translate</span>
+          <span>✓ Emergency Support</span>
+        </div>
+      </div>
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-title">✦ EASYVIETNAM</div>
+          <div class="phone-sub">Trang chủ • Home</div>
+          <div class="welcome-card">Xin chào! 👋<br><small>Du lịch Việt Nam dễ dàng & an toàn</small></div>
+          <button class="mini-card pink" onclick="location.hash='chat'">💬 <b>Trợ lý AI</b><small>Hỏi đáp 24/7</small></button>
+          <button class="mini-card yellow" onclick="location.hash='map'">📍 <b>Bản đồ</b><small>Tìm địa điểm gần bạn</small></button>
+          <button class="mini-card rose" onclick="location.hash='emergency'">🛡️ <b>SOS & Dịch</b><small>Khẩn cấp & dịch ngôn ngữ</small></button>
+          <div class="phone-nav">⌂　💬　✉　🛡</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro">
+      <div>
+        <span class="eyebrow">Vấn đề chúng tôi giải quyết</span>
+        <h2>Ở Việt Nam một mình<br>không còn quá khó.</h2>
+      </div>
+      <div class="problem-grid">
+        <article><span>🗣️</span><h3>Rào cản ngôn ngữ</h3><p>Không biết nói gì khi hỏi đường, gọi món hay gặp sự cố.</p></article>
+        <article><span>🧭</span><h3>Khó tìm địa điểm</h3><p>Khó biết nơi nào gần, uy tín và phù hợp với nhu cầu.</p></article>
+        <article><span>🚨</span><h3>Tình huống khẩn cấp</h3><p>Cần hỗ trợ nhanh nhưng không biết gọi ai hoặc diễn đạt thế nào.</p></article>
+      </div>
+    </section>
+
+    <section id="map" class="section feature">
+      <div class="feature-copy">
+        <span class="eyebrow">01 • MAP</span>
+        <h2>Bản đồ thông minh</h2>
+        <p>Tìm bệnh viện, ATM, nhà hàng, khách sạn và các địa điểm cần thiết quanh bạn.</p>
+        <div class="chips">
+          <button class="chip active" data-filter="all">Tất cả</button>
+          <button class="chip" data-filter="food">Ăn uống</button>
+          <button class="chip" data-filter="atm">ATM</button>
+          <button class="chip" data-filter="medical">Y tế</button>
+          <button class="chip" data-filter="hotel">Khách sạn</button>
+        </div>
+      </div>
+      <div class="map-card">
+        <div class="map-surface">
+          <div class="road r1"></div><div class="road r2"></div><div class="road r3"></div>
+          <span class="pin p1 food">🍜</span><span class="pin p2 medical">🏥</span><span class="pin p3 atm">🏧</span><span class="pin p4 hotel">🏨</span>
+          <div class="you">●<small>Bạn</small></div>
+          <div class="map-label l1">Phở Gia Truyền</div>
+          <div class="map-label l2">Bệnh viện 108</div>
+        </div>
+        <div class="place-list" id="placeList"></div>
+      </div>
+    </section>
+
+    <section id="chat" class="section feature reverse">
+      <div class="chat-demo">
+        <div class="chat-head">🤖 <b>Trợ lý AI</b><span>● Online</span></div>
+        <div class="messages" id="messages">
+          <div class="msg user">Ẩm thực gần đây ở Hà Nội?</div>
+          <div class="msg bot">Mình có thể gợi ý quán ăn gần bạn. Bạn muốn lọc theo giá hay khoảng cách?</div>
+        </div>
+        <form id="chatForm" class="chat-input">
+          <input id="chatInput" placeholder="Nhập câu hỏi... / Ask anything..." autocomplete="off">
+          <button>➤</button>
+        </form>
+      </div>
+      <div class="feature-copy">
+        <span class="eyebrow">02 • AI CHAT</span>
+        <h2>Trợ lý AI 24/7</h2>
+        <p>Hỏi bằng tiếng Việt hoặc tiếng Anh. AI hỗ trợ gợi ý địa điểm, hướng dẫn cơ bản và giải thích những điều cần biết khi du lịch.</p>
+        <div class="quote">“Bạn không cần biết tiếng Việt hoàn hảo. Chỉ cần nói điều bạn cần.”</div>
+      </div>
+    </section>
+
+    <section id="emergency" class="section emergency">
+      <div class="emergency-head">
+        <span class="eyebrow">03 • EMERGENCY</span>
+        <h2>Khẩn cấp & Dịch nhanh</h2>
+        <p>Một màn hình cho những lúc bạn cần hỗ trợ ngay.</p>
+      </div>
+      <div class="emergency-grid">
+        <article class="sos-card">
+          <span class="shield">🛡️</span>
+          <h3>SOS khẩn cấp</h3>
+          <p>Trong tình huống nguy hiểm, hãy liên hệ dịch vụ khẩn cấp địa phương.</p>
+          <button class="sos-btn" id="sosBtn">📞 Gọi 115</button>
+          <button class="location-btn" id="locationBtn">📍 Chia sẻ vị trí</button>
+          <small id="locationStatus"></small>
+        </article>
+        <article class="translate-card">
+          <span class="shield">🌐</span>
+          <h3>Quick Translate</h3>
+          <div class="translate-row">
+            <select id="fromLang"><option>Việt</option><option>English</option></select>
+            <span>⇄</span>
+            <select id="toLang"><option>English</option><option>Việt</option></select>
+          </div>
+          <textarea id="translateText" placeholder="Ví dụ: Xin giúp tôi, tôi bị lạc đường."></textarea>
+          <button class="primary full" id="translateBtn">Dịch ngay →</button>
+          <div class="translation-result" id="translationResult">Bản dịch sẽ xuất hiện ở đây.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <h2>Đi Việt Nam dễ hơn với EasyVietnam.</h2>
+      <p>Một nơi để hỏi, tìm, dịch và nhận hỗ trợ khi bạn cần.</p>
+      <a class="primary" href="#home">Bắt đầu · Get Started →</a>
+    </section>
+  </main>
+
+  <footer>
+    <b>✦ EASYVIETNAM</b>
+    <span>Easy & Safe Travel in Vietnam</span>
+    <span>© 2026 EasyVietnam</span>
+  </footer>
+  <script>
+const places = [
+  {name:"Phở Gia Truyền", type:"food", icon:"🍜", meta:"12m · ⭐ 4.8 · 06:00–22:00"},
+  {name:"Bệnh viện 108", type:"medical", icon:"🏥", meta:"200m · ⭐ 4.5 · 08:00–21:00"},
+  {name:"ATM Vietcombank", type:"atm", icon:"🏧", meta:"350m · Mở cửa 24/7"},
+  {name:"Khách sạn gần bạn", type:"hotel", icon:"🏨", meta:"500m · ⭐ 4.6"}
+];
+
+const placeList = document.getElementById("placeList");
+function renderPlaces(filter="all"){
+  placeList.innerHTML = places.filter(p=>filter==="all"||p.type===filter).map(p=>`
+    <div class="place"><div>${p.icon} <b>${p.name}</b></div><small>${p.meta}</small></div>
+  `).join("");
+}
+renderPlaces();
+
+document.querySelectorAll(".chip").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".chip").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    renderPlaces(btn.dataset.filter);
+  });
+});
+
+const chatForm = document.getElementById("chatForm");
+const chatInput = document.getElementById("chatInput");
+const messages = document.getElementById("messages");
+chatForm.addEventListener("submit",e=>{
+  e.preventDefault();
+  const q=chatInput.value.trim();
+  if(!q)return;
+  messages.insertAdjacentHTML("beforeend",`<div class="msg user">${escapeHtml(q)}</div>`);
+  chatInput.value="";
+  setTimeout(()=>{
+    const reply = q.toLowerCase().includes("phở") || q.toLowerCase().includes("ăn")
+      ? "Mình có thể giúp bạn tìm món ăn gần đây. Bạn muốn món Việt, chay hay theo mức giá?"
+      : "Mình hiểu rồi. Bạn có thể cho mình biết thành phố hoặc nhu cầu cụ thể hơn không?";
+    messages.insertAdjacentHTML("beforeend",`<div class="msg bot">${reply}</div>`);
+    messages.scrollTop=messages.scrollHeight;
+  },450);
+});
+function escapeHtml(s){return s.replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));}
+
+document.getElementById("sosBtn").addEventListener("click",()=>{
+  if(confirm("Đây là nút mô phỏng gọi 115. Khi sử dụng thật, hãy gọi số khẩn cấp phù hợp tại nơi bạn đang ở.")){}
+});
+document.getElementById("locationBtn").addEventListener("click",()=>{
+  const out=document.getElementById("locationStatus");
+  if(!navigator.geolocation){out.textContent="Thiết bị không hỗ trợ chia sẻ vị trí.";return;}
+  out.textContent="Đang lấy vị trí…";
+  navigator.geolocation.getCurrentPosition(
+    pos=>out.textContent=`Đã lấy vị trí: ${pos.coords.latitude.toFixed(4)}, ${pos.coords.longitude.toFixed(4)}`,
+    ()=>out.textContent="Không thể lấy vị trí. Hãy kiểm tra quyền Location."
+  );
+});
+
+document.getElementById("translateBtn").addEventListener("click",()=>{
+  const text=document.getElementById("translateText").value.trim();
+  const result=document.getElementById("translationResult");
+  if(!text){result.textContent="Hãy nhập câu cần dịch.";return;}
+  const dictionary={
+    "xin giúp tôi, tôi bị lạc đường.":"Please help me, I am lost.",
+    "tôi bị lạc đường":"I am lost.",
+    "xin chào":"Hello.",
+    "cảm ơn":"Thank you."
+  };
+  const key=text.toLowerCase();
+  result.textContent=dictionary[key] || "Demo: Bản dịch AI sẽ được tích hợp trong phiên bản thật.";
+});
+
+document.getElementById("langBtn").addEventListener("click",()=>{
+  alert("Demo giao diện: phiên bản thật có thể chuyển toàn bộ nội dung VI / EN.");
+});
+
+</script>
+</body>
+</html>
