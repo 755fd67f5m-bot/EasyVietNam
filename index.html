@@ -3,168 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EasyVietnam - Trợ lý hỗ trợ người nước ngoài tại Việt Nam</title>
-    <!-- Sử dụng Tailwind CSS để thiết kế giao diện hiện đại -->
+    <title>EasyVietnam - Trợ lý hỗ trợ người nước ngoài</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-pink-50 font-sans text-gray-800">
+<body class="bg-[#FFF5F5] font-sans text-gray-800 pb-20">
 
-    <!-- Header / Navbar -->
-    <header class="bg-white shadow-sm border-b border-pink-100 py-4 px-6 flex justify-between items-center">
+    <!-- Header ứng dụng -->
+    <header class="bg-white shadow-sm border-b border-pink-100 py-3 px-4 flex justify-between items-center sticky top-0 z-50">
         <div class="flex items-center space-x-2">
-            <span class="bg-pink-500 text-white p-2 rounded-lg shadow"><i class="fa-solid fa-hands-holding-child"></i></span>
-            <h1 class="text-xl font-bold text-pink-600">EasyVietnam</h1>
+            <span class="bg-pink-500 text-white p-2 rounded-lg shadow-sm"><i class="fa-solid fa-hands-holding-child"></i></span>
+            <h1 class="text-lg font-bold text-pink-600">EasyVietnam</h1>
         </div>
-        <div class="text-sm text-gray-500 hidden sm:block">Trợ lý hỗ trợ toàn diện cho người nước ngoài tại Việt Nam 🇻🇳</div>
+        <div class="text-xs bg-pink-100 text-pink-600 font-medium px-2.5 py-1 rounded-full">Nhóm 8 - Thuyết trình</div>
     </header>
 
-    <!-- Main Chat Container -->
-    <main class="max-w-4xl mx-auto p-4 md:p-6 h-[calc(100vh-100px)] flex flex-col">
-        
-        <!-- Khung chọn ngôn ngữ dịch (50 ngôn ngữ) -->
-        <div class="bg-white p-4 rounded-xl shadow-sm border border-pink-100 mb-4 flex flex-wrap items-center justify-between gap-3">
-            <div class="flex items-center space-x-2">
-                <i class="fa-solid fa-language text-pink-500 text-lg"></i>
-                <span class="font-semibold text-gray-700">Chọn ngôn ngữ / Language (50+):</span>
-            </div>
-            <select id="languageSelect" class="bg-pink-50 border border-pink-200 text-gray-700 text-sm rounded-lg focus:ring-pink-500 focus:border-pink-500 block p-2.5 outline-none font-medium max-w-xs">
-                <option value="vi">Tiếng Việt (Vietnamese)</option>
-                <option value="en" selected>English (Tiếng Anh)</option>
-                <option value="zh">中文 (Tiếng Trung - Quan Thoại)</option>
-                <option value="es">Español (Tiếng Tây Ban Nha)</option>
-                <option value="hi">हिन्दी (Tiếng Hindi)</option>
-                <option value="ar">العربية (Tiếng Ả Rập)</option>
-                <option value="bn">বাংলা (Tiếng Bengal)</option>
-                <option value="pt">Português (Tiếng Bồ Đào Nha)</option>
-                <option value="ru">Русский (Tiếng Nga)</option>
-                <option value="ja">日本語 (Tiếng Nhật)</option>
-                <option value="pa">ਪੰਜਾਬੀ (Tiếng Punjab)</option>
-                <option value="de">Deutsch (Tiếng Đức)</option>
-                <option value="jv">Basa Jawa (Tiếng Java)</option>
-                <option value="ko">한국어 (Tiếng Hàn)</option>
-                <option value="fr">Français (Tiếng Pháp)</option>
-                <option value="te">తెలుగు (Tiếng Telugu)</option>
-                <option value="mr">मराठी (Tiếng Marathi)</option>
-                <option value="tr">Türkçe (Tiếng Thổ Nhĩ Kỳ)</option>
-                <option value="ta">தமிழ் (Tiếng Tamil)</option>
-                <option value="ur">اردو (Tiếng Urdu)</option>
-                <option value="it">Italiano (Tiếng Ý)</option>
-                <option value="gu">ગુજરાતી (Tiếng Gujarat)</option>
-                <option value="fa">فارسی (Tiếng Ba Tư)</option>
-                <option value="pl">Polski (Tiếng Ba Lan)</option>
-                <option value="uk">Українська (Tiếng Ukraina)</option>
-                <option value="ro">Română (Tiếng Romania)</option>
-                <option value="nl">Nederlands (Tiếng Hà Lan)</option>
-                <option value="el">Ελληνικά (Tiếng Hy Lạp)</option>
-                <option value="hu">Magyar (Tiếng Hungary)</option>
-                <option value="sv">Svenska (Tiếng Thụy Điển)</option>
-                <option value="cs">Čeština (Tiếng Séc)</option>
-                <option value="id">Bahasa Indonesia (Tiếng Indonesia)</option>
-                <option value="ms">Bahasa Melayu (Tiếng Mã Lai)</option>
-                <option value="th">ไทย (Tiếng Thái)</option>
-                <option value="fil">Filipino (Tiếng Tagalog/Philippines)</option>
-                <option value="my">မြန်မာဘာသာ (Tiếng Miến Điện)</option>
-                <option value="km">ខ្មែរ (Tiếng Khmer)</option>
-                <option value="lo">ລາວ (Tiếng Lào)</option>
-                <option value="da">Dansk (Tiếng Đan Mạch)</option>
-                <option value="fi">Suomi (Tiếng Phần Lan)</option>
-                <option value="no">Norsk (Tiếng Na Uy)</option>
-                <option value="sk">Slovenčina (Tiếng Slovak)</option>
-                <option value="bg">Български (Tiếng Bulgaria)</option>
-                <option value="sr">Српски (Tiếng Serbia)</option>
-                <option value="hr">Hrvatski (Tiếng Croatia)</option>
-                <option value="he">עברית (Tiếng Do Thái)</option>
-                <option value="sw">Kiswahili (Tiếng Swahili)</option>
-                <option value="am">አማርኛ (Tiếng Amhara)</option>
-                <option value="uz">Oʻzbekcha (Tiếng Uzbek)</option>
-                <option value="az">Azərbaycan dili (Tiếng Azerbaijan)</option>
-            </select>
-        </div>
+    <!-- Khu vực chính mô phỏng khung giao diện Slide Canva -->
+    <main class="max-w-2xl mx-auto p-4">
 
-        <!-- Khung hiển thị tin nhắn chat -->
-        <div id="chatContainer" class="flex-1 bg-white rounded-2xl shadow-md border border-pink-100 p-4 overflow-y-auto space-y-4 mb-4">
-            <!-- Tin nhắn chào mừng từ Bot -->
-            <div class="flex items-start space-x-3">
-                <div class="bg-pink-500 text-white rounded-full h-9 w-9 flex items-center justify-center flex-shrink-0 shadow">
-                    <i class="fa-solid fa-robot"></i>
+        <!-- Khung Cửa Sổ Trình Duyệt (Browser Window Mockup giống Slide) -->
+        <div class="bg-white rounded-xl shadow-lg border-2 border-pink-200 overflow-hidden mb-4">
+            <!-- Thanh tiêu đề cửa sổ (Browser Top Bar) -->
+            <div class="bg-pink-100 px-4 py-2 flex items-center justify-between border-b border-pink-200">
+                <div class="flex items-center space-x-1.5">
+                    <span class="w-3 h-3 bg-red-400 rounded-full inline-block"></span>
+                    <span class="w-3 h-3 bg-yellow-400 rounded-full inline-block"></span>
+                    <span class="w-3 h-3 bg-green-400 rounded-full inline-block"></span>
                 </div>
-                <div class="bg-pink-50 text-gray-800 p-3.5 rounded-2xl max-w-[80%] text-sm leading-relaxed shadow-sm border border-pink-100">
-                    <p class="font-semibold text-pink-600 mb-1">EasyVietnam Bot xin chào! 👋</p>
-                    <p>Tôi ở đây để hỗ trợ bạn vượt qua mọi rào cản khi sinh sống, làm việc và du lịch tại Việt Nam. Bạn cần trợ giúp về vấn đề gì?</p>
-                    <div class="mt-2 text-xs text-pink-500 italic">✨ Hỗ trợ giải quyết: Rào cản ngôn ngữ, y tế, tìm nhà ở, thủ tục giấy tờ, và các tình huống khẩn cấp.</div>
+                <div class="bg-white px-6 py-1 rounded-full text-[11px] text-gray-400 border border-pink-200 flex items-center space-x-2 w-1/2 justify-center">
+                    <i class="fa-solid fa-lock text-[10px] text-pink-400"></i>
+                    <span class="truncate">755fd67f5m-bot.github.io/EasyVietNam</span>
+                </div>
+                <div class="flex space-x-2 text-pink-400 text-xs">
+                    <i class="fa-solid fa-minus"></i>
+                    <i class="fa-solid fa-square text-[10px]"></i>
+                    <i class="fa-solid fa-xmark"></i>
                 </div>
             </div>
+
+            <!-- NỘI DUNG TRONG CỬA SỔ (Thay đổi theo Tab) -->
+            <div class="p-6 min-h-[320px] bg-white">
+
+                <!-- TAB 1: TRANG CHỦ -->
+                <div id="view-home" class="space-y-4">
+                    <h2 class="text-pink-600 font-bold text-base border-b border-pink-100 pb-2">1. Tên dịch vụ:</h2>
+                    <div class="p-4 bg-pink-50 rounded-xl border border-pink-100 flex items-center justify-between">
+                        <div>
+                            <p class="font-bold text-gray-800 text-sm">EASYVIETNAM</p>
+                            <p class="text-xs text-pink-600 mt-1">Trợ lý hỗ trợ người nước ngoài tại Việt Nam 🇻🇳</p>
+                        </div>
+                        <i class="fa-solid fa-heart text-rose-400 text-2xl animate-pulse"></i>
+                    </div>
+                    <p class="text-xs text-gray-500 italic text-center pt-2">✨ Bấm sang mục "Vấn đề" hoặc "Phiên dịch" ở thanh menu bên dưới để xem tiếp nội dung slide.</p>
+                </div>
+
+                <!-- TAB 2: VẤN ĐỀ (Giống hệt Slide Canva của bạn)[span_1](start_span)[span_1](end_span) -->
+                <div id="view-issues" class="space-y-4 hidden">
+                    <h2 class="text-pink-600 font-bold text-base border-b border-pink-100 pb-2">3. Vấn đề</h2>
+                    <ul class="space-y-3 text-xs sm:text-sm">
+                        <li class="flex items-center space-x-3 text-gray-700">
+                            <span class="text-lg">🧋</span>
+                            <span>Rào cản ngôn ngữ</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-gray-700">
+                            <span class="text-lg">🏥</span>
+                            <span>Khó giao tiếp khi cần hỗ trợ y tế</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-gray-700">
+                            <span class="text-lg">🏠</span>
+                            <span>Khó tìm nhà, dịch vụ uy tín</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-gray-700">
+                            <span class="text-lg">📄</span>
+                            <span>Khó hiểu thủ tục, giấy tờ</span>
+                        </li>
+                        <li class="flex items-center space-x-3 text-gray-700">
+                            <span class="text-lg">🚨</span>
+                            <span>Không biết tìm sự trợ giúp khi gặp tình huống khó khăn</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- TAB 3: PHIÊN DỊCH & CHAT (50 NGÔN NGỮ) -->
+                <div id="view-chat" class="space-y-3 hidden">
+                    <div class="flex items-center justify-between bg-pink-50 p-2.5 rounded-lg border border-pink-100">
+                        <span class="text-xs font-bold text-pink-600"><i class="fa-solid fa-language"></i> Chọn ngôn ngữ (50+):</span>
+                        <select id="languageSelect" class="bg-white border border-pink-200 text-gray-700 text-xs rounded-md p-1.5 outline-none font-medium">
+                            <option value="vi">Tiếng Việt (Vietnamese)</option>
+                            <option value="en" selected>English (Tiếng Anh)</option>
+                            <option value="zh">中文 (Tiếng Trung)</option>
+                            <option value="es">Español (Tây Ban Nha)</option>
+                            <option value="ja">日本語 (Tiếng Nhật)</option>
+                            <option value="ko">한국어 (Tiếng Hàn)</option>
+                            <option value="th">ไทย (Tiếng Thái)</option>
+                            <option value="fr">Français (Tiếng Pháp)</option>
+                            <option value="de">Deutsch (Tiếng Đức)</option>
+                            <option value="ru">Русский (Tiếng Nga)</option>
+                            <option value="hi">हिन्दी (Tiếng Hindi)</option>
+                            <option value="ar">العربية (Tiếng Ả Rập)</option>
+                            <option value="id">Bahasa Indonesia</option>
+                            <option value="ms">Bahasa Melayu</option>
+                            <option value="fil">Filipino (Tagalog)</option>
+                        </select>
+                    </div>
+
+                    <!-- Khung chat bên trong cửa sổ -->
+                    <div id="chatContainer" class="bg-gray-50 rounded-xl p-3 h-[200px] overflow-y-auto space-y-2 text-xs border border-pink-100">
+                        <div class="flex items-start space-x-2">
+                            <div class="bg-pink-500 text-white rounded-full h-6 w-6 flex items-center justify-center flex-shrink-0 text-[10px]">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                            <div class="bg-white text-gray-800 p-2.5 rounded-xl max-w-[85%] leading-relaxed border border-pink-100 shadow-sm">
+                                <p>Xin chào! Hãy chọn ngôn ngữ và nhập yêu cầu hỗ trợ y tế, tìm nhà hoặc thủ tục giấy tờ nhé.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ô nhập tin nhắn -->
+                    <div class="flex items-center space-x-2 pt-1">
+                        <input type="text" id="userInput" placeholder="Nhập tin nhắn..." class="flex-1 bg-white border border-pink-200 rounded-lg px-3 py-2 text-xs focus:outline-none focus:border-pink-500">
+                        <button id="sendBtn" class="bg-pink-500 text-white px-4 py-2 rounded-lg text-xs font-medium shadow hover:bg-pink-600 transition">Gửi</button>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
-        <!-- Khu vực nhập tin nhắn -->
-        <div class="bg-white p-3 rounded-xl shadow-sm border border-pink-100 flex items-center space-x-2">
-            <input type="text" id="userInput" placeholder="Nhập câu hỏi của bạn tại đây..." class="flex-1 bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-pink-500 focus:bg-white transition">
-            <button id="sendBtn" class="bg-pink-500 hover:bg-pink-600 text-white px-5 py-3 rounded-lg font-medium transition flex items-center space-x-1 shadow">
-                <span>Gửi</span>
-                <i class="fa-solid fa-paper-plane text-xs"></i>
-            </button>
-        </div>
     </main>
 
-    <!-- Script xử lý tương tác -->
+    <!-- THANH ĐIỀU HƯỚNG MÀN HÌNH (Menu dưới đáy) -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-pink-100 py-2.5 px-6 flex justify-around items-center z-50 shadow-lg">
+        <button onclick="switchTab('home')" id="nav-home" class="flex flex-col items-center text-pink-500 space-y-1">
+            <i class="fa-solid fa-house text-base"></i>
+            <span class="text-[10px] font-bold">1. Tên dịch vụ</span>
+        </button>
+        <button onclick="switchTab('issues')" id="nav-issues" class="flex flex-col items-center text-gray-400 space-y-1">
+            <i class="fa-solid fa-list-check text-base"></i>
+            <span class="text-[10px] font-bold">3. Vấn đề</span>
+        </button>
+        <button onclick="switchTab('chat')" id="nav-chat" class="flex flex-col items-center text-gray-400 space-y-1">
+            <i class="fa-solid fa-comments text-base"></i>
+            <span class="text-[10px] font-bold">Hỗ trợ phiên dịch</span>
+        </button>
+    </nav>
+
+    <!-- Script điều hướng và xử lý -->
     <script>
+        function switchTab(tabName) {
+            document.getElementById('view-home').classList.add('hidden');
+            document.getElementById('view-issues').classList.add('hidden');
+            document.getElementById('view-chat').classList.add('hidden');
+
+            document.getElementById('nav-home').className = "flex flex-col items-center text-gray-400 space-y-1";
+            document.getElementById('nav-issues').className = "flex flex-col items-center text-gray-400 space-y-1";
+            document.getElementById('nav-chat').className = "flex flex-col items-center text-gray-400 space-y-1";
+
+            document.getElementById('view-' + tabName).classList.remove('hidden');
+            document.getElementById('nav-' + tabName).className = "flex flex-col items-center text-pink-500 space-y-1";
+        }
+
         const chatContainer = document.getElementById('chatContainer');
         const userInput = document.getElementById('userInput');
         const sendBtn = document.getElementById('sendBtn');
         const languageSelect = document.getElementById('languageSelect');
 
-        function getBotResponse(input) {
-            const text = input.toLowerCase();
-            if (text.includes('y tế') || text.includes('bệnh viện') || text.includes('medical') || text.includes('hospital')) {
-                return "🏥 Về y tế: EasyVietnam hỗ trợ kết nối phiên dịch viên y tế, hướng dẫn khám chữa bệnh và tìm kiếm cơ sở y tế uy tín cho bạn.";
-            } else if (text.includes('nhà') || text.includes('thuê') || text.includes('house') || text.includes('rent')) {
-                return "🏠 Về tìm nhà ở: Chúng tôi giúp bạn tìm kiếm căn hộ, chỗ ở uy tín, hỗ trợ thương lượng hợp đồng thuê nhà an toàn và minh bạch.";
-            } else if (text.includes('giấy tờ') || text.includes('thủ tục') || text.includes('visa') || text.includes('document')) {
-                return "📄 Về thủ tục, giấy tờ: Hỗ trợ tư vấn và hướng dẫn làm các thủ tục pháp lý, giấy phép lao động, visa một cách nhanh chóng.";
-            } else {
-                return "💡 Cảm ơn bạn! EasyVietnam luôn sẵn sàng hỗ trợ giải quyết các rào cản ngôn ngữ và khó khăn của bạn tại Việt Nam.";
-            }
-        }
-
         function appendMessage(sender, message) {
             const isUser = sender === 'user';
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `flex items-start space-x-3 ${isUser ? 'flex-row-reverse space-x-reverse' : ''}`;
-            
-            messageDiv.innerHTML = `
-                <div class="${isUser ? 'bg-indigo-500' : 'bg-pink-500'} text-white rounded-full h-9 w-9 flex items-center justify-center flex-shrink-0 shadow">
+            const div = document.createElement('div');
+            div.className = `flex items-start space-x-2 ${isUser ? 'flex-row-reverse space-x-reverse' : ''}`;
+            div.innerHTML = `
+                <div class="${isUser ? 'bg-indigo-500' : 'bg-pink-500'} text-white rounded-full h-6 w-6 flex items-center justify-center flex-shrink-0 text-[10px]">
                     <i class="fa-solid ${isUser ? 'fa-user' : 'fa-robot'}"></i>
                 </div>
-                <div class="${isUser ? 'bg-indigo-50 text-gray-800 border-indigo-100' : 'bg-pink-50 text-gray-800 border-pink-100'} p-3.5 rounded-2xl max-w-[80%] text-sm leading-relaxed shadow-sm border">
+                <div class="${isUser ? 'bg-indigo-50 border-indigo-100' : 'bg-white border-pink-100'} p-2.5 rounded-xl max-w-[80%] text-xs leading-relaxed border shadow-sm">
                     <p>${message}</p>
                 </div>
             `;
-            chatContainer.appendChild(messageDiv);
+            chatContainer.appendChild(div);
             chatContainer.scrollTop = chatContainer.scrollHeight;
         }
 
-        function handleSend() {
+        sendBtn.addEventListener('click', () => {
             const text = userInput.value.trim();
-            if (!text) return;
-
+            if(!text) return;
             appendMessage('user', text);
             userInput.value = '';
-
             setTimeout(() => {
-                const response = getBotResponse(text);
-                appendMessage('bot', response);
+                appendMessage('bot', "💡 EasyVietnam đã ghi nhận yêu cầu và sẽ kết nối nhân sự hỗ trợ bạn ngay!");
             }, 500);
-        }
+        });
 
-        sendBtn.addEventListener('click', handleSend);
         userInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') handleSend();
+            if(e.key === 'Enter') sendBtn.click();
         });
 
         languageSelect.addEventListener('change', (e) => {
-            const selectedOption = e.target.options[e.target.selectedIndex].text;
-            appendMessage('bot', `🌐 [System]: Đã chuyển đổi ngôn ngữ giao diện sang: ${selectedOption}`);
+            const langName = e.target.options[e.target.selectedIndex].text;
+            appendMessage('bot', `🌐 Đã chuyển đổi ngôn ngữ sang: ${langName}`);
         });
     </script>
 </body>
